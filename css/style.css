@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+    --text-color: #fff;
+    --main-color: #83b735;
+  }
+  section {
+    padding: 50px 10%;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 100px;
+    background:#747574;
+  }
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  .navbar {
+    position: relative;
+    display: flex;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+  }
+  #menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: center;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+  }
+  .home-text h1 {
+    font-size: 2.7rem;
+    color: #fff;
+  }
+  .home-text p {
+    font-size: 0.938rem;
+    margin: 0.4rem 0 1.8rem;
+  }
+  .btn {
+    padding: 10px 14px;
+    background:blue;
+    color: #fff;
+    border-radius: 0.0rem;
+    font-size: 14px;
+  }
+  .btn:hover {
+    background: rgb(1, 161, 1);;
+    color: #000000;
+  }
+  .gray{
+      color: rgb(132, 133, 134);
+  }
+  .blue{
+    color: rgb(8, 174, 185);
+}
+.green{
+    color: rgb(1, 161, 1);
+}
+.heading {
+    text-align: center;
+  }
+  .heading span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+  }
+  .services {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background: #858585;
+  }
+  .services-img img {
+    width: 350px;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  .services-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+  }
+  .todo{
+    background: #858585;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background: #dbd8d8;
+  }
+  .engineer img{
+    height: 320px;
+    width: 300px;
+    border-radius: 50%; 
+  }
+  .about-icons {
+    width: 10%;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  .about-text span {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+  .about-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+  }
+  .icons {
+    display:flex;
+  }
+  .my-skills {
+    display: flex;
+    gap: 1rem;
+  background: rgb(248, 239, 239);
+  text-align: center;
+  }
+  .my-skills table{
+    width: 430px;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1rem;
+    background:#7c7c7c;
+  }
+  .text-A{
+    width: 240px;
+    height: 36px;
+    border: none;
+    outline: none;
+    padding: 11px;
+  }
+.btn {
+  height: 44px;
+  border: none;
+  border-radius: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: rgb(0, 110, 255);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 2px solid rgb(10, 10, 10);
+}
+.contactf{
+  align-content: center;
+}
+.contactf table{
+  width: 430px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.text-B{
+  width: 240px;
+  height: 36px;
+  border: none;
+  outline: none;
+  padding: 11px;
+  align-items: center;
+}
+.contactf {
+background:white;
+}
