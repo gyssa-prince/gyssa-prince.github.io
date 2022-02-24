@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<html lang="en-gb" dir="ltr" vocab="http://schema.org/" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="login-box">
+  <h1>Sign in</h1>
+  <form action="###" method="post">
+  <table bgcolor="#333333" width="300">
+  <td>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Username" name="names" required>
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" name="password" required>
+  </div>
+  
+ 
+  <input type="submit" class="btn" name="submit" value="Sign in ">
+</div>
+               <a href="index.html"> <center> <font style="font-family:'Comic Sans MS'; color:#009CE8">Go back</font></center></a>
+</td>
+</table>
+</form>
+</body>
+</html>
+<script>
+  
+  const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+    const dateObj = new Date();
+    const month = monthNames[dateObj.getMonth()];
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const year = dateObj.getFullYear();
+    const output = month  + '\n'+ day  + ',' + year;
+    var d = new Date(); // for now
+let a=d.getHours(); // => 9
+let b=d.getMinutes(); // =>  30
+let c=d.getSeconds(); // => 51
+ let time=output +" "+ a +"-"+ b+"-"+ c
+</script>
