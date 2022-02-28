@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="dashstyle.css">
+
+	<title>Dashboard</title>
+</head>
+<body>
+    <section id="sidebar">
+		<a href="#" class="brand">
+        <i class='bx bx-home-circle'></i>
+		<span class="text">GYSSA</span>
+		</a>
+        <ul class="side-menu top">
+            <li>
+                <a href="#" class="posts">
+                    <i class='bx bxs-doughnut-chart' ></i>
+				<span class="post">Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="messages">
+                    <i class='bx bxs-message-dots' ></i>
+				<span class="msg">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="subscribers">
+                    <i class='bx bxs-group' ></i>
+				<span class="subs">Subscribers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="dashboard">
+                <i class='bx bx-pulse'></i>
+				<span class="acts">Activities</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="subscribers">
+                    <i class='bx bx-export'></i>
+				<span class="addp">Add a Post</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="subscribers">
+                
+				<span class="text"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="subscribers">
+                    <i class='bx bxs-cog' ></i>
+				<span class="text">Change password</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle' ></i>
+				<span class="text" id="logout">Log out</span>
+                </a>
+            </li>
+        </ul>
+</section>
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<form action="#">
+        <div class="inpt">
+               <input type="search" class="inptt" placeholder="Search...">
+                <button type="submit" class="sbtn"><i class='bx bx-search' ></i></button>
+            </div>
+        </form>
+        <input type="checkbox" id="switch-mode" hidden>
+        <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="notification">
+         Notifications   <i class='bx bxs-bell' ><span class="num"><sup>3</sup></span></i>
+            
+        </a>
+        <a href="#" class="profile">
+          <img src="../img/engr.jpg">
+        </a>
+    </nav>
+    </section>
+    <main>
+        <div class="table-data">
+            <div class="messages">
+                <div class="head">
+                    <h3 align="center">Recent Messages</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Email </th>
+                            <th>Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tb1"></tbody>
+                        
+                        <script src="../firebase.js"></script>
+                            <script src="../app.js"></script>
+                </table>
+            </div>
+    
+
+                    </div>
+                    <div class="table2-data">
+                        <div class="subscribers">
+                            <div class="head">
+                                <h3 align="center">Subscribers</h3>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Date </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tb2"></tbody>
+                            <script src="../subs.js"></script>
+                            </table>
+                        </div>
+
+                        </div>
+                        
+                    <div class="blog-container1">
+                        <div class="subscribers">
+                            <div class="head">
+                            <h3 align="center">All posts</h3>
+                        </div>
+                        </div>
+                        <table class="P">
+                            <thead>
+                                <tr>
+                                    <th>Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                    <th>Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                                    <th>Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                                    <th>Control&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                                
+                                </tr>
+                                </thead>
+                                <tbody id="tb3"></tbody>
+                        </table>
+                    </div>
+                                    </div>
+                               
+                                
+      <div class="Add-post">
+          <a href="">Upload a blog</a>
+          <form id="postin">
+          <div class="post">
+          <input type="text" name="ArticleHeader" id="title" placeholder="Enter Article header......"><br>
+          <textarea name="ArticleIntro" id="intro" placeholder="Enter Article Intro.........." style="height: 50px; width: 100%;"></textarea><br>
+          <textarea name="ArticleDescription" id="description" class="Art_intro" placeholder="Enter Article descriptions.........."></textarea><br>
+          <label> <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required style="display:none"><label>Add an image</label><strong><div class="iconimg"><i class='bx bxs-image-add'></i></div></strong></label>
+           <input type="submit" class="addpost" id="AddPost" value="Add Post">
+        </form>
+           
+        </div>
+      </div>
+
+      <div class="Edit-post" id="Edit-post">
+        <a href="">Update a blog</a>
+        <form id="updatin">
+        <div class="post">
+        <input type="text" name="ArticleHeader" id="titles"><br>
+        <textarea name="ArticleIntro" id="intros" style="height: 50px; width: 100%;"></textarea><br>
+        <textarea name="ArticleDescription" id="descriptions" class="Art_intro" ></textarea><br>
+        <label> <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required style="display:none"><label>Add an image</label><strong><div class="iconimg"><i class='bx bxs-image-add'></i></div></strong></label>
+         <input type="submit" class="editpost" id="UpdatePost" value="Update Post">
+      </form>
+         
+      </div>
+    </div>
+
+      <div class="table3-data">
+        <div class="subscribers">
+            <div class="head">
+                <h3 align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recent Activities</h3><br>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Date </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Uploaded a blog
+                        </td>
+                        <td>01-10-2021</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Edited a blog
+                        </td>
+                        <td>01-10-2021</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Uploaded a blog
+                        </td>
+                        <td>01-10-2021</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deleted a blog
+                        </td>
+                        <td>01-10-2021</td>
+                    </tr>
+            </table>
+        </div>
+
+        </div>
+
+    </div>                    
+    </main>
+    <script>
+        const msg = document.getElementsByClassName('msg')[0]
+        const messages =document.getElementsByClassName('table-data')[0]
+        const post = document.getElementsByClassName('post')[0]
+        const posts = document.getElementsByClassName('blog-container1')[0]
+        const addp = document.getElementsByClassName('addp')[0]
+        const addpost = document.getElementsByClassName('Add-post')[0]
+        const subs = document.getElementsByClassName('subs')[0]
+        const subscribers = document.getElementsByClassName('table2-data')[0]
+        const acts = document.getElementsByClassName('acts')[0]
+        const Activities = document.getElementsByClassName('table3-data')[0]
+       msg.addEventListener('click', () =>{
+        posts.style.display="none";
+        subscribers.style.display="none";
+        addpost.style.display="none";
+        Activities.style.display="none";
+        messages.style.display="flex";
+        })
+
+        post.addEventListener('click', () =>{
+        posts.style.display="flex";
+        addpost.style.display="none";
+        Activities.style.display="none";
+        messages.style.display="none";
+        subscribers.style.display="none";
+        })
+
+        addp.addEventListener('click', () =>{
+        posts.style.display="none";
+        addpost.style.display="block";
+        Activities.style.display="none";
+        messages.style.display="none";
+        subscribers.style.display="none";
+        })
+
+        acts.addEventListener('click', () =>{
+        posts.style.display="none";
+        addpost.style.display="none";
+        Activities.style.display="flex";
+        messages.style.display="none";
+        subscribers.style.display="none";
+        })
+
+        subs.addEventListener('click', () =>{
+        posts.style.display="none";
+        addpost.style.display="none";
+        Activities.style.display="none";
+        messages.style.display="none";
+        subscribers.style.display="flex";
+        })
+        </script>
+</body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+<script>
+    const auth = firebase.auth();
+auth.onAuthStateChanged(user =>{
+    if(user){
+        console.log("User logged in: ", user);
+    }else{
+        console.log("user logged out ", user);
+        window.location.href="../index.html"
+    }
+});
+
+
+    logout.addEventListener('click', (e)=>{
+        e.preventDefault();
+        auth.signOut();
+        window.location.href="../index.html"
+    })
+</script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAooC6GZdOow4Ua5laOURlRDzUnpQb8Ih8",
+      authDomain: "personal-web-6f353.firebaseapp.com",
+      projectId: "personal-web-6f353",
+      storageBucket: "personal-web-6f353.appspot.com",
+      messagingSenderId: "137010214646",
+      appId: "1:137010214646:web:295d000efc7550352aded7"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    import {
+        getFirestore, doc,getDoc,setDoc, collection, addDoc, serverTimestamp, updateDoc, deleteDoc, deleteField
+    } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js'
+
+    const db= getFirestore();
+
+    // reference
+
+    let Title =document.getElementById("title");
+    let Intro = document.getElementById("intro")
+    let Description =document.getElementById("description");
+
+    let postin =document.getElementById("postin");
+
+
+
+    
+    let post  = document.getElementById("AddPost");
+
+    //Adding documents
+
+    async function AddDocument_AutoID(){
+        var ref = collection(db,"Posts");
+
+        const docRef = await addDoc(
+            ref, {
+                Title: Title.value,
+                Intro: Intro.value,
+                More: Description.value,
+                Date_time: time,
+            }
+        )
+        .then(() => {
+            alert("Posted sucessfully");
+            postin.reset();
+
+        })
+        .catch((error)=> {
+            alert ("Something went wrong !!!"+error);
+        });
+        
+    }
+
+
+    //Assign event to button
+
+    post.addEventListener("click",AddDocument_AutoID)
+  
+  //date
+
+  
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
+const dateObj = new Date();
+const month = monthNames[dateObj.getMonth()];
+const day = String(dateObj.getDate()).padStart(2, '0');
+const year = dateObj.getFullYear();
+const output = month  + '\n'+ day  + ',' + year;
+var d = new Date();
+let a=d.getHours(); 
+let b=d.getMinutes(); 
+let c=d.getSeconds(); 
+let time=output +" "+ a +":"+ b+":"+ c
+
+  </script>
+
+
+
+<script>
+    const Posts = document.querySelector('#tb3');
+
+var tbody2 = document.getElementById('tb3');
+let del='<div class="icons"><div class="Del"><i class="bx bx-trash"></i></div></div>';
+let edit='<div class="icons"><div class="Edit"><i class="bx bx-edit-alt"></i></div></div>';
+
+                            function AddItemTotable2(doc){
+                                let trow = document.createElement("tr");
+                                let td1 = document.createElement('td');
+                                let td2 = document.createElement('td');
+                                let td3 = document.createElement('td');
+                                let td4 = document.createElement('td');
+                                td4.style.display = "flex";
+                                Edit = document.createElement('td');
+                                Del = document.createElement('td');
+        
+                                trow.setAttribute('data-id', doc.id);
+                                td1.innerHTML=doc.data().Date_time;
+                                td2.innerHTML= doc.data().Title;
+                                td3.innerHTML= "GYSSAGARA";
+                                Edit.innerHTML=edit;
+                                Del.innerHTML=del;
+                                
+                                
+                                
+
+                                trow.appendChild(td1);
+                                trow.appendChild(td2);
+                                trow.appendChild(td3);
+                                trow.appendChild(td4);
+                                td4.appendChild(Edit);
+                                td4.appendChild(Del);
+                              
+                              
+                              
+                            
+                              
+                                tbody2.appendChild(trow);
+
+
+                               Del.addEventListener('click', (e) => {
+                                 e.stopPropagation();
+                                let id=(trow.getAttribute('data-id'));
+                                if (confirm('Are you sure to delete this blog?')) {
+                                 db.collection('Posts').doc(id).delete();
+                                 }
+                                   });
+                                 
+                                 Edit.addEventListener('click', (e) => {
+                                 e.stopPropagation();
+                                let id=(trow.getAttribute('data-id'));
+                                db.collection('Posts').doc(id);
+                                document.getElementById("Edit-post").style.display = "block";
+                                document.getElementById("Edit-post").style.position = "relative";
+                                document.getElementById("titles").value = doc.data().Title;
+                                document.getElementById("intros").value = doc.data().Intro;
+                                document.getElementById("descriptions").value = doc.data().More;
+
+                                let update  = document.getElementById("UpdatePost");
+                                update.addEventListener('click',(e) =>{
+                                    e.preventDefault();
+                                    db.collection('Posts').doc(id).update({
+                                       Title : document.getElementById("titles").value,
+                                       Intro : document.getElementById("intros").value,
+                                       More : document.getElementById("description").value, 
+                                    });
+                                    document.getElementById("Edit-post").style.display = "none"; 
+                                })
+            
+                                
+                                   });
+                                 }
+
+                            
+                           //function for adding all items to the table
+
+                           function AddAllItemsTotable2(Posts){
+                               tbody2.innerHTML="";
+                               Posts.forEach(element => {
+                                AddItemTotable1(element.Date_time, element.Title,);
+                               });
+                           }
+// getting data
+db.collection('Posts').get().then(snapshot => {
+  snapshot.docs.forEach(doc => {
+    AddItemTotable2(doc);
+  });
+});
+</script>
