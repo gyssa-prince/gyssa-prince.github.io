@@ -85,13 +85,16 @@
     color: #000000;
   }
   .gray{
-      color: rgb(132, 133, 134);
+      color: rgb(159, 160, 160);
   }
   .blue{
-    color: rgb(8, 174, 185);
+    color: rgb(223, 190, 2);
+}
+.htext{
+  color:rgb(112, 112, 250);
 }
 .green{
-    color: rgb(1, 161, 1);
+    color:rgb(223, 190, 2);
 }
 .heading {
     text-align: center;
@@ -105,8 +108,9 @@
   .about {
     display: flex;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    background:  #858585;;
+    gap: 3rem;
+    background:  #b8b6b6;
+    padding-top:18px;
   }
   .about-img img {
     width: 350px;
@@ -116,9 +120,11 @@
   .about-text p {
     font-size: 0.938rem;
     margin: 0.5rem 0 1.4rem;
+    padding: 8px;
   }
   .aboutH{
-    background:  #858585;;
+    background:  #b8b6b6;
+    font-size:1.4rem;
   }
   .about-text p {
     font-size: 0.978rem;
@@ -143,6 +149,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     background: #f0f0f0;
+    padding-top:36px;
   }
   .projects-img img {
     width: 300px;
@@ -156,6 +163,8 @@
   }
   .projectsH{
     background: #f0f0f0;
+    padding-top:21px;
+    font-size: 1.4rem;
   }
   .footer {
     display: grid;
