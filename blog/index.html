@@ -13,6 +13,7 @@
 <body>
     <nav>
         <a href="../index.html" class="logo">GYS<span class="blue">S</span><span class="green">A</span></a>
+        <img src="../img/toggle.png" height="20px" class="bx-menu" id="menu-icon"></div>
         <ul class="navbar1">
             <li><a href="../index.html#home" >Home</a></li>
             <li><a href="../index.html#about">About me</a></li>
@@ -22,6 +23,7 @@
         </ul>
     </nav>
     <section id="blog">
+        <div class="search" style="display:none;"><input type="text" name="title" placeholder="Search here" class="inpt"><input type="submit" name="search" value="Search" class="sbtn"></div>
     <header>
         <ul class="navbar">
             <li><a href="#home" >Scientific facts</a></li>
@@ -34,39 +36,7 @@
     <div class="search">
    </div>
     <div class="blog-container" id="blog-container">
-        <div class="blog-box1">
-        <div class="blog-img">
-         <img src="img/quantum.jpg" width="350px"  height="180px" alt="blog">
-        </div>
-        <div class="blog-text">
-            <span>11 february 2022 /GYSSAGARA Prince</span>
-        <a href="#" class="blog-title">In 2019, Google announced that its Sycamore quantum </a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
-        <a href="#" class="one">Read More</a>
-    </div> 
-        </div>
-        <div class="blog-box2">
-            <div class="blog-img">
-             <img src="img/moon.webp" width="350px" height="180px" alt="blog">
-            </div>
-            <div class="blog-text">
-                <span>15 february 2022 /GYSSAGARA Prince</span>
-            <a href="#" class="blog-title">In 2019, Google announced that its Sycamore quantum  </a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
-            <a href="#" class="two">Read More</a>
-        </div> 
-            </div>
-            <div class="blog-box3">
-                <div class="blog-img">
-                 <img src="img/dk.jpg" width="350px"  height="180px" alt="blog">
-                </div>
-                <div class="blog-text">
-                    <span>11 february 2022 /GYSSAGARA Prince</span>
-                <a href="#" class="blog-title">In 2019, Google announced that its Sycamore quantum  </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    
-                <a href="#" class="three">Read More</a>
-            </div> 
-                </div>
+       
                 </div>
 
                
@@ -80,12 +50,12 @@
             &nbsp;&nbsp;&nbsp;&nbsp;and share thoughts.</p>
            <br>
             <h3>&nbsp;&nbsp;&nbsp;Subscribe To Newsletter</h3>
-            &nbsp;&nbsp;&nbsp;<input type="email" name="email" id="subscribing" placeholder="Enter your email" class="text-A"><input type="submit" name="subscribe" id="subscri" value="Subscribe" class="btn">
+            &nbsp;&nbsp;&nbsp;<input type="email" name="email" id="subscribing" placeholder="Enter your email" class="text-A" required><input type="submit" name="subscribe" id="subscri" value="Subscribe" class="btn">
         </div>
            <div class="company">
                <h3>SEND AN IDEA</h3>
-               <input type="email" id="email" name="email" placeholder="Email" style="width: 250px;padding:3px;border: 1px solid rgb(5, 5, 5);border-radius: 4px;">
-       <br><textarea id="subject" name="subject" placeholder="Write your message.." style="height:100px;width: 250px;padding:8px;border: 1px solid #ccc;border-radius: 4px;"></textarea><br>
+               <input type="email" id="email" name="email" placeholder="Email" style="width: 250px;padding:3px;border: 1px solid rgb(5, 5, 5);border-radius: 4px;" required>
+       <br><textarea id="subject" name="subject" placeholder="Write your message.." style="height:100px;width: 250px;padding:8px;border: 1px solid #ccc;border-radius: 4px;" required></textarea><br>
         <input type="submit" value="Send" id="submit" name="submit" class="btn">
     </fieldset>
            </div>
@@ -100,7 +70,7 @@
            <h4 align="center" style="background-color:#ffff;">&#169;GYSSA TECHONOLOGIES All Right Reserved</h4>
            <script src="../firebase.js"></script>
            <script src="js/blog.js"></script>
-            
+           <script src="main.js"></script>
         </body>
 </html>
 <script type="module">
