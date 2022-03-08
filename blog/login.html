@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<html lang="en-gb" dir="ltr" vocab="http://schema.org/" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="login-box">
+  <h1>Sign in</h1>
+  <form action="###" method="post" id="login-form">
+  <table bgcolor="#333333" width="300">
+  <td>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Username" id="email" name="names" required>
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" id="password" name="password" required>
+  </div>
+  
+ 
+  <input type="submit" class="btn" id="btnLogin" name="submit" value="Sign in ">
+</div>
+               <a href="index.html"> <center> <font style="font-family:'Comic Sans MS'; color:#009CE8">Go back</font></center></a>
+</td>
+</table>
+</form>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script>
+
+var firebaseConfig = {
+  apiKey: "AIzaSyAooC6GZdOow4Ua5laOURlRDzUnpQb8Ih8",
+  authDomain: "personal-web-6f353.firebaseapp.com",
+  databaseURL: "https://personal-web-6f353-default-rtdb.firebaseio.com",
+  projectId: "personal-web-6f353",
+  storageBucket: "personal-web-6f353.appspot.com",
+  messagingSenderId: "137010214646",
+  appId: "1:137010214646:web:3a473b027ca93ced2aded7"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+</script>
+<script src="js/auth.js"></script>
+</body>
+</html>
